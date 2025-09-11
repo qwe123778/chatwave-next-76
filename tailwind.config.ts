@@ -19,6 +19,23 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
+        // Chat app specific colors
+        'chat-primary': "hsl(var(--chat-primary))",
+        'chat-primary-light': "hsl(var(--chat-primary-light))",
+        'chat-secondary': "hsl(var(--chat-secondary))",
+        'chat-accent': "hsl(var(--chat-accent))",
+        
+        // Message colors
+        'message-sent': "hsl(var(--message-sent))",
+        'message-sent-foreground': "hsl(var(--message-sent-foreground))",
+        'message-received': "hsl(var(--message-received))",
+        'message-received-foreground': "hsl(var(--message-received-foreground))",
+        
+        // Sidebar colors
+        'sidebar-bg': "hsl(var(--sidebar-bg))",
+        'sidebar-hover': "hsl(var(--sidebar-hover))",
+        'sidebar-active': "hsl(var(--sidebar-active))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -62,6 +79,20 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-chat': 'var(--gradient-chat-bg)',
+        'gradient-message': 'var(--gradient-message)',
+      },
+      boxShadow: {
+        'message': 'var(--shadow-message)',
+        'sidebar': 'var(--shadow-sidebar)',
+        'float': 'var(--shadow-float)',
+      },
+      transitionTimingFunction: {
+        'smooth': 'var(--transition-smooth)',
+        'bounce': 'var(--transition-bounce)',
       },
       keyframes: {
         "accordion-down": {

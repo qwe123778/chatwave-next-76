@@ -2,14 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Modern Chat App Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Chat App Color Palette */
+    --background: 240 20% 99%;
+    --foreground: 240 10% 3.9%;
+    
+    /* Chat specific colors */
+    --chat-primary: 262 83% 58%;
+    --chat-primary-light: 262 83% 68%;
+    --chat-secondary: 220 14% 96%;
+    --chat-accent: 142 76% 36%;
+    
+    /* Message bubbles */
+    --message-sent: 262 83% 58%;
+    --message-sent-foreground: 0 0% 100%;
+    --message-received: 0 0% 100%;
+    --message-received-foreground: 240 10% 3.9%;
+    
+    /* Sidebar */
+    --sidebar-bg: 240 20% 99%;
+    --sidebar-hover: 240 20% 96%;
+    --sidebar-active: 262 83% 98%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 83% 68%));
+    --gradient-chat-bg: linear-gradient(135deg, hsl(240 20% 99%), hsl(220 20% 97%));
+    --gradient-message: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 83% 48%));
+    
+    /* Shadows */
+    --shadow-message: 0 2px 8px hsl(262 83% 58% / 0.15);
+    --shadow-sidebar: 0 0 30px hsl(240 10% 3.9% / 0.1);
+    --shadow-float: 0 10px 40px hsl(262 83% 58% / 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
