@@ -20,22 +20,14 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         
-        // Chat app specific colors
-        'chat-primary': "hsl(var(--chat-primary))",
-        'chat-primary-light': "hsl(var(--chat-primary-light))",
-        'chat-secondary': "hsl(var(--chat-secondary))",
-        'chat-accent': "hsl(var(--chat-accent))",
+        // Birthday website specific colors
+        'birthday-primary': "hsl(var(--birthday-primary))",
+        'birthday-secondary': "hsl(var(--birthday-secondary))",
+        'birthday-accent': "hsl(var(--birthday-accent))",
+        'birthday-success': "hsl(var(--birthday-success))",
         
-        // Message colors
-        'message-sent': "hsl(var(--message-sent))",
-        'message-sent-foreground': "hsl(var(--message-sent-foreground))",
-        'message-received': "hsl(var(--message-received))",
-        'message-received-foreground': "hsl(var(--message-received-foreground))",
-        
-        // Sidebar colors
-        'sidebar-bg': "hsl(var(--sidebar-bg))",
-        'sidebar-hover': "hsl(var(--sidebar-hover))",
-        'sidebar-active': "hsl(var(--sidebar-active))",
+        // Card colors
+        'card-bg': "hsl(var(--card-bg))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -81,18 +73,22 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       backgroundImage: {
-        'gradient-primary': 'var(--gradient-primary)',
-        'gradient-chat': 'var(--gradient-chat-bg)',
-        'gradient-message': 'var(--gradient-message)',
+        'gradient-birthday': 'var(--gradient-birthday)',
+        'gradient-celebration': 'var(--gradient-celebration)',
+        'gradient-warm': 'var(--gradient-warm)',
       },
       boxShadow: {
-        'message': 'var(--shadow-message)',
-        'sidebar': 'var(--shadow-sidebar)',
-        'float': 'var(--shadow-float)',
+        'celebration': 'var(--shadow-celebration)',
+        'card': 'var(--shadow-card)',
+        'glow': 'var(--shadow-glow)',
+      },
+      fontFamily: {
+        'dancing': ['Dancing Script', 'cursive'],
+        'poppins': ['Poppins', 'sans-serif'],
       },
       transitionTimingFunction: {
-        'smooth': 'var(--transition-smooth)',
         'bounce': 'var(--transition-bounce)',
+        'smooth': 'var(--transition-smooth)',
       },
       keyframes: {
         "accordion-down": {
@@ -111,10 +107,27 @@ export default {
             height: "0",
           },
         },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" }
+        },
+        "confetti": {
+          "0%": { transform: "translateY(-100vh) rotate(0deg)", opacity: "1" },
+          "100%": { transform: "translateY(100vh) rotate(720deg)", opacity: "0" }
+        },
+        "bounce-in": {
+          "0%": { transform: "scale(0.3)", opacity: "0" },
+          "50%": { transform: "scale(1.05)" },
+          "70%": { transform: "scale(0.9)" },
+          "100%": { transform: "scale(1)", opacity: "1" }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "confetti": "confetti 3s linear infinite",
+        "bounce-in": "bounce-in 0.6s ease-out",
       },
     },
   },

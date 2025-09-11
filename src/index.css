@@ -6,40 +6,33 @@
 
 @layer base {
   :root {
-    /* Chat App Color Palette */
-    --background: 240 20% 99%;
-    --foreground: 240 10% 3.9%;
+    /* Birthday Website Color Palette */
+    --background: 350 100% 99%;
+    --foreground: 340 10% 15%;
     
-    /* Chat specific colors */
-    --chat-primary: 262 83% 58%;
-    --chat-primary-light: 262 83% 68%;
-    --chat-secondary: 220 14% 96%;
-    --chat-accent: 142 76% 36%;
+    /* Birthday specific colors */
+    --birthday-primary: 330 81% 60%;
+    --birthday-secondary: 45 93% 65%;
+    --birthday-accent: 270 85% 70%;
+    --birthday-success: 142 76% 50%;
     
-    /* Message bubbles */
-    --message-sent: 262 83% 58%;
-    --message-sent-foreground: 0 0% 100%;
-    --message-received: 0 0% 100%;
-    --message-received-foreground: 240 10% 3.9%;
-    
-    /* Sidebar */
-    --sidebar-bg: 240 20% 99%;
-    --sidebar-hover: 240 20% 96%;
-    --sidebar-active: 262 83% 98%;
+    /* Card backgrounds */
+    --card-bg: 0 0% 100%;
+    --card-shadow: 330 81% 60% / 0.1;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 83% 68%));
-    --gradient-chat-bg: linear-gradient(135deg, hsl(240 20% 99%), hsl(220 20% 97%));
-    --gradient-message: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 83% 48%));
+    --gradient-birthday: linear-gradient(135deg, hsl(330 81% 60%), hsl(270 85% 70%));
+    --gradient-celebration: linear-gradient(45deg, hsl(45 93% 65%), hsl(330 81% 60%), hsl(270 85% 70%));
+    --gradient-warm: linear-gradient(135deg, hsl(20 100% 75%), hsl(45 93% 65%));
     
     /* Shadows */
-    --shadow-message: 0 2px 8px hsl(262 83% 58% / 0.15);
-    --shadow-sidebar: 0 0 30px hsl(240 10% 3.9% / 0.1);
-    --shadow-float: 0 10px 40px hsl(262 83% 58% / 0.2);
+    --shadow-celebration: 0 20px 60px hsl(330 81% 60% / 0.3);
+    --shadow-card: 0 8px 32px hsl(340 10% 15% / 0.1);
+    --shadow-glow: 0 0 50px hsl(330 81% 60% / 0.5);
     
     /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-smooth: all 0.3s ease-out;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
