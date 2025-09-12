@@ -1,7 +1,7 @@
-import { BirthdayWebsite } from "@/components/BirthdayWebsite";
+import { SimpleBirthdayWebsite } from "@/components/SimpleBirthdayWebsite";
 
 const Index = () => {
-  return <BirthdayWebsite />;
+  return <SimpleBirthdayWebsite />;
 };
 
 export default Index;
