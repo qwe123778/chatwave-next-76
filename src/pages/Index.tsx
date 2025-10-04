@@ -1,7 +1,7 @@
-import { SimpleBirthdayWebsite } from "@/components/SimpleBirthdayWebsite";
+import { PaySkulWebsite } from "@/components/PaySkulWebsite";
 
 const Index = () => {
-  return <SimpleBirthdayWebsite />;
+  return <PaySkulWebsite />;
 };
 
 export default Index;
