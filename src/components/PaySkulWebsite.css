@@ -70,7 +70,7 @@
 
 /* Services Section */
 .services-section {
-  background: white;
+  background: #f8f5fc;
   padding: 3rem 1.5rem;
   text-align: center;
 }
@@ -92,97 +92,76 @@
   margin-right: auto;
 }
 
-.carousel-container {
-  position: relative;
+.services-layout {
   max-width: 1200px;
-  margin: 0 auto 2rem;
-  display: flex;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 400px 1fr;
+  gap: 2rem;
   align-items: center;
-  gap: 1rem;
 }
 
-.carousel-wrapper {
-  flex: 1;
-  overflow: hidden;
-  border-radius: 1rem;
-}
-
-.carousel-track {
+.services-cards-grid {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.service-card {
-  min-width: 100%;
-  padding: 3rem 2rem;
+.service-card-small {
+  padding: 2rem 1.5rem;
   border-radius: 1rem;
-  text-align: center;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.service-icon-circle {
-  width: 80px;
-  height: 80px;
+.service-icon-circle-small {
+  width: 60px;
+  height: 60px;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
-  margin: 0 auto 1.5rem;
-}
-
-.service-title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #1a1a1a;
   margin-bottom: 1rem;
 }
 
-.service-description {
-  color: #333;
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 400px;
-  margin: 0 auto;
+.service-title-small {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
 }
 
-.carousel-btn {
-  background: #4a3566;
-  color: white;
-  border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 2rem;
-  cursor: pointer;
+.service-description-small {
+  color: #333;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.services-phone-mockup {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s;
-  flex-shrink: 0;
+  height: 500px;
 }
 
-.carousel-btn:hover {
-  background: #5a4576;
-  transform: scale(1.1);
+.phone-illustration {
+  width: 280px;
+  height: 500px;
+  background: linear-gradient(135deg, #d4b5f5 0%, #e6d5f5 100%);
+  border-radius: 2.5rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
 }
 
-.carousel-pagination {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-}
-
-.pagination-dot {
-  width: 12px;
-  height: 12px;
+.phone-illustration::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  background: #ddd;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.pagination-dot.active {
-  background: #4a3566;
-  width: 30px;
-  border-radius: 6px;
 }
 
 /* Priority Section */
@@ -240,12 +219,13 @@
 .finance-section {
   background: linear-gradient(180deg, #E6D5F5 0%, #F0E6F5 100%);
   padding: 4rem 1.5rem;
-  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .finance-image-placeholder {
-  max-width: 400px;
-  height: 500px;
+  max-width: 100%;
+  height: 600px;
   margin: 0 auto 2rem;
   background: linear-gradient(135deg, #C5B5E5 0%, #D5C5F5 100%);
   border-radius: 2rem;
@@ -257,11 +237,24 @@
 }
 
 .phone-mockup {
-  width: 200px;
-  height: 400px;
+  width: 250px;
+  height: 500px;
   background: white;
-  border-radius: 2rem;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  border-radius: 2.5rem;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+.phone-mockup::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
 }
 
 .finance-title {
@@ -572,8 +565,18 @@
     font-size: 2rem;
   }
 
-  .carousel-btn {
-    display: none;
+  .services-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .services-phone-mockup {
+    height: 400px;
+  }
+
+  .phone-illustration {
+    width: 220px;
+    height: 400px;
   }
 
   .features-grid {
@@ -589,5 +592,9 @@
   .download-btn {
     width: 100%;
     max-width: 300px;
+  }
+
+  .finance-image-placeholder {
+    height: 400px;
   }
 }

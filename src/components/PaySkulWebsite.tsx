@@ -97,39 +97,24 @@ export const PaySkulWebsite = () => {
           Download the app and school with ease.
         </p>
 
-        <div className="carousel-container">
-          <button className="carousel-btn prev" onClick={prevSlide}>‹</button>
-          
-          <div className="carousel-wrapper">
-            <div 
-              className="carousel-track"
-              style={{ transform: `translateX(-${activeSlide * 100}%)` }}
-            >
-              {services.map((service, index) => (
-                <div 
-                  key={index} 
-                  className="service-card"
-                  style={{ backgroundColor: service.color }}
-                >
-                  <div className="service-icon-circle"></div>
-                  <h3 className="service-title">{service.title}</h3>
-                  <p className="service-description">{service.description}</p>
-                </div>
-              ))}
-            </div>
+        <div className="services-layout">
+          <div className="services-cards-grid">
+            {services.map((service, index) => (
+              <div 
+                key={index} 
+                className="service-card-small"
+                style={{ backgroundColor: service.color }}
+              >
+                <div className="service-icon-circle-small"></div>
+                <h3 className="service-title-small">{service.title}</h3>
+                <p className="service-description-small">{service.description}</p>
+              </div>
+            ))}
           </div>
-
-          <button className="carousel-btn next" onClick={nextSlide}>›</button>
-        </div>
-
-        <div className="carousel-pagination">
-          {services.map((_, index) => (
-            <button
-              key={index}
-              className={`pagination-dot ${activeSlide === index ? 'active' : ''}`}
-              onClick={() => setActiveSlide(index)}
-            />
-          ))}
+          
+          <div className="services-phone-mockup">
+            <div className="phone-illustration"></div>
+          </div>
         </div>
       </section>
 
